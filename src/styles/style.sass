@@ -1,0 +1,252 @@
+@import "base/fs.sass"
+@import "base/header.sass"
+@import "base/footer.sass"
+@import "components/breadcrumb.sass"
+@import "components/left-menu.sass"
+@import "components/gallery.sass"
+@import "components/card-news.sass"
+@import "pages/form.sass"
+@import "pages/post.sass"
+@import "vars/social.sass"
+@import "vars/fonts.sass"
+@import "vars/colors.sass"
+@import "vars/vars.sass"
+@import "color.sass"
+@import "mixin.sass"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+a
+    text-decoration: none!important
+
+body
+    overflow-x: hidden
+    @extend %btn
+    @extend %btn-light
+    @extend %form
+
+@keyframes moveUpDown
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(-10px)
+    100%
+        transform: translateY(0)
+
+@keyframes rotateLeftRight
+    0%
+        transform: rotate(0deg)
+    50%
+        transform: rotate(-20deg)
+    100%
+        transform: rotate(0deg)
+
+.carousel
+    .rocket
+        animation: moveUpDown 2s ease-in-out infinite
+        top: 20px
+        left: 90px
+        svg
+            max-width: 119.06px
+            max-height: 119.06px
+            width: 100%
+            height: 100%
+    .ruler
+        animation: rotateLeftRight 5s ease-in-out infinite
+        bottom: 50px
+        left: 190px
+        svg
+            max-width: 80.41px
+            max-height: 80.41px
+            width: 100%
+            height: 100%
+    .star
+        bottom: 35%
+        left: 850px
+        svg
+            max-width: 80.41px
+            max-height: 80.41px
+            width: 100%
+            height: 100%
+    .linear-slider, &-item
+        max-height: 700px
+        min-height: 400px
+        img
+            max-height: 700px
+            min-height: 400px
+            border-radius: 8px
+        h1
+            margin-bottom: 20px
+            span
+                text
+        p
+            margin-bottom: 50px
+            max-width: 470px
+            @media screen and (max-width: 1199px)
+                &
+                    margin-bottom: 40px
+    .carousel-control-next, .carousel-control-prev
+        background-color: transparent!important
+        width: 18px
+        height: 18px
+        opacity: 1
+        left: 60px
+    .carousel-control-next
+        top: 0%
+        &-icon 
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3e%3cg clip-path='url(%23clip0_64_68)'%3e%3cpath d='M17.6176 8.11478L9.89795 0.366448C9.40549 -0.116424 8.5808 -0.127839 8.08829 0.366448L0.368602 8.11478C-0.101012 8.58614 -0.123858 9.36783 0.311334 9.86221C0.792422 10.4255 1.66286 10.4485 2.18969 9.93121L7.73321 4.36712C7.73321 4.36712 7.73321 16.7484 7.73321 16.7713C7.73321 18.3923 10.2988 18.4267 10.2988 16.7713L10.2988 4.36712L15.8423 9.93116C16.3348 10.4254 17.1595 10.4254 17.652 9.93116C18.1216 9.42536 18.1216 8.62064 17.6176 8.11478Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_64_68'%3e%3crect width='18' height='18' fill='white' transform='matrix(-1 0 0 -1 18 18)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e")
+    .carousel-control-prev
+        top: 63%
+        left: 60px
+        margin-left: auto
+        &-icon
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3e%3cg clip-path='url(%23clip0_64_72)'%3e%3cpath d='M0.38236 9.88522L8.10205 17.6336C8.59451 18.1164 9.4192 18.1278 9.91171 17.6336L17.6314 9.88522C18.101 9.41386 18.1239 8.63217 17.6887 8.13779C17.2076 7.5745 16.3371 7.55147 15.8103 8.06879L10.2668 13.6329C10.2668 13.6329 10.2668 1.2516 10.2668 1.22867C10.2668 -0.392287 7.70123 -0.426735 7.70123 1.22867V13.6329L2.15765 8.06884C1.66519 7.57455 0.8405 7.57455 0.34799 8.06884C-0.121573 8.57464 -0.121573 9.37936 0.38236 9.88522Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_64_72'%3e%3crect width='18' height='18' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e")
+    .carousel-indicators 
+        left: 46px
+        top: 0
+        & [data-bs-target]
+            max-width: 10px
+            width: 100%
+            max-height: 10px
+            height: 100%
+            padding: 0!important
+            border: none
+            margin: 8px 0px
+            margin-right: auto!important
+            opacity: 1!important
+        button
+            &.active
+                &::after
+                    position: absolute
+                    content: ""
+                    width: 22px
+                    height: 22px
+                    top: -60%
+                    left: -60%
+                    border-radius: 50%
+        .line-top, .line-bottom
+            margin:20px 4px
+            width: 2px
+            height: 85px
+    .slider-button
+        height: 100%
+        left: 0
+        top: 0%
+        width: 130px
+
+.about
+    margin: 120px 0px
+    .img-block
+        max-width: 574px
+        img
+            border-radius: 33px
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: 1
+        .circle-about
+            top: -7%
+            right: -5%
+            max-width: 154.8px
+            max-height: 154.8px
+            z-index: -1
+        .bg-about
+            bottom: -10%
+            left: -10%
+            max-width: 312.97px
+            max-height: 380.27px
+            z-index: -1
+    .content
+        h2
+            margin-top: -60px
+            margin-bottom: 30px
+        .accordion-item
+            margin-bottom: 16px
+            box-shadow: 0px 4px 25px rgb(0 0 0 / 9%)
+            .accordion-button
+                padding: 25px 30px!important
+                &::after
+                    width: 12px
+                    height: 12px
+                    background-size: contain
+                    transform: rotate(-90deg)
+                &:not(.collapsed)
+                    background-color: $white!important
+                    &::after
+                        transform: rotate(0deg)!important
+            ul
+                li
+                    list-style-type: none
+                    position: relative
+                    margin-bottom: 10px
+                    &::after
+                        width: 16px
+                        height: 12px
+                        position: absolute
+                        left: -30px
+                        top: 4px
+                        content: " "
+                        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_44_391)'%3e%3cpath d='M16 1.14773C16.0003 1.23293 15.9843 1.31733 15.9532 1.39605C15.922 1.47478 15.8762 1.54626 15.8184 1.60636L6.15072 11.7069C5.97083 11.8946 5.727 12 5.47278 12C5.21855 12 4.97472 11.8946 4.79484 11.7069L0.181623 6.88708C0.0653222 6.76538 0 6.60044 0 6.42847C0 6.25649 0.0653222 6.09155 0.181623 5.96986L0.659592 5.47052C0.776234 5.34931 0.934053 5.28128 1.09856 5.28128C1.26307 5.28128 1.42089 5.34931 1.53753 5.47052L5.25431 9.35374C5.28294 9.3838 5.317 9.40764 5.3545 9.42386C5.39201 9.44008 5.43222 9.44838 5.47281 9.44826C5.55471 9.44802 5.63322 9.41406 5.69131 9.35374L14.4625 0.18973C14.579 0.0682366 14.7369 0 14.9014 0C15.066 0 15.2239 0.0682366 15.3404 0.18973L15.8185 0.689266C15.8763 0.749361 15.9221 0.820821 15.9532 0.899515C15.9843 0.978208 16.0003 1.06257 16 1.14773Z' fill='%23E97800'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_44_391'%3e%3crect width='16' height='12' fill='#{$dropdown}'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ")
+                        
+.advantages
+    padding: 60px 0px
+    .img-block
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 33px
+
+.news
+    margin-top: 70px
+    @extend %title
+    @extend %card-news
+    button
+        margin-top: 20px
+        max-width: 424px
+
+.current
+    margin: 140px 0
+    @extend %title
+    @extend %slider-1
+
+.gallery
+    margin-top: 200px
+    @extend %title
+    @extend %gallery
+    button
+        margin-top: 50px
+        max-width: 424px
+    .item
+        img
+            height: 300px
+            border-radius: 8px
+
+.useful-links
+    margin-top: 140px
+    @extend %title
+    @extend %slider-2
+
+.desk
+    .card
+        border: none!important
+        margin-bottom: 30px
+        border-radius: 8px!important
+        &-header
+            svg
+                width: 73px
+                height: 73px
+            border: none!important
+            padding: 26px 30px
+        &-body
+            padding: 0px 30px
+        &-footer 
+            padding: 16px 30px 30px 26px
+            border: none!important
+
+.fancybox__container
+    button
+        padding: 10px 16px!important

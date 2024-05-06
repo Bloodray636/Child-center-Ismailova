@@ -1,0 +1,73 @@
+@import "../vars/fonts.sass"
+    
+@font-face
+    font-family: $bold-nunito
+    src: url(../../src/assets/fonts/Nunito-Bold.ttf) format('truetype'),
+
+@font-face
+    font-family: $regular-pangolin
+    src: url(../../src/assets/fonts/Pangolin-Regular.ttf) format('truetype'),
+
+@font-face
+    font-family: $regular-source
+    src: url(../../src/assets/fonts/SourceSans3-Regular.ttf) format('truetype'),
+
+@font-face
+    font-family: $semibold-source
+    src: url(../../src/assets/fonts/SourceSans3-SemiBold.ttf) format('truetype'),
+
+body
+    font-family: $regular-source!important
+
+p
+    font-size: clamp(0.875rem, 0.447rem + 0.8929vw, 1rem)!important
+
+.top-contact
+    p
+        font-weight: 600
+        font-family: $semibold-source!important
+        font-size: clamp(0.75rem, 0.4464rem + 0.4902vw, 0.875rem)!important
+
+.nav-link
+    font-family: $semibold-source
+    font-weight: 600!important
+    font-size: clamp(0.75rem, 0.1428rem + 0.9804vw, 1rem)!important
+
+button
+    font-family: $semibold-source
+    font-weight: bolder!important
+    font-size: clamp(0.875rem, 0.5714rem + 0.4902vw, 1rem)!important
+
+h2, h3, h4, h5, h6, a, p, span, label, input, textarea, li, ul, ol, button
+    line-height: normal!important
+    font-style: normal
+
+h1
+    font-size: clamp(2.5rem, -1.7801rem + 8.9286vw, 3.75rem)!important
+    font-family: $bold-nunito!important
+
+h2
+    font-size: clamp(1.5rem, -4.0642rem + 11.6071vw, 3.125rem)!important
+    font-family: $bold-nunito!important
+
+h3
+    font-size: clamp(1.125rem, 0.5178rem + 0.9804vw, 1.375rem)!important
+    font-family: $bold-nunito 
+
+h4
+    font-size: clamp(1.25rem, 0.6428rem + 0.9804vw, 1.5rem)!important
+    font-family: $bold-nunito
+
+h6
+    font-family: $regular-pangolin
+    font-size: clamp(0.875rem, 0.2678rem + 0.9804vw, 1.125rem)!important
+    letter-spacing: 2px
+    margin-bottom: 15px!important
+
+button
+    font-size: clamp(0.875rem, 0.5714rem + 0.4902vw, 1rem)!important
+    font-family: $bold-nunito!important
+
+.accordion
+    button
+        font-size: clamp(1.125rem, 0.8214rem + 0.4902vw, 1.25rem)!important

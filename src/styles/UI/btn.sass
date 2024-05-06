@@ -1,0 +1,51 @@
+@import "../vars/vars.sass"
+
+%btn
+    button
+        box-shadow: none!important
+        border: none
+        padding: 22px 30px!important
+        border-radius: 22px!important
+        white-space: normal
+        @media screen and (max-width: 1199px)
+            &
+                padding: 22px 30px!important
+        svg
+            margin-left: 10px
+
+%btn-light
+    .btn-block
+        .btn.btn-light
+            margin-left: 30px!important
+            box-shadow: none!important
+            border: none
+            padding: 22px 30px!important
+            border-radius: 22px!important
+            white-space: normal
+            @media screen and (max-width: 1199px)
+                &
+                    padding: 22px 30px!important
+            svg
+                margin-left: 10px
+
+%btn-dark
+    .btn-block
+        .btn.btn-dark
+            padding: 14px 30px!important
+            border-radius: $radius!important  
+            @media screen and (max-width: 1199px)
+                &
+                    padding: 10px 20px!important 
+            @media screen and (max-width: 360px)
+                &
+                    width: 100%
+
+%btn-tabs
+    .btn-block
+        .btn.btn-tabs
+            padding: 14px 30px!important
+            border-radius: $radius!important
+            margin-bottom: 10px!important
+            @media screen and (max-width: 1199px)
+                &
+                    padding: 10px 20px!important

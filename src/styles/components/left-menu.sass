@@ -1,0 +1,48 @@
+@import "../UI/btn.sass"
+@import "../vars/vars.sass"
+
+%left-menu
+.left-menu
+    padding: 5px 0
+    border-radius: 8px
+    transition: .5s ease
+    li
+        border: none
+        padding: 30px 0px 0px 0px!important
+        margin: 0px !important
+        border-radius: 8px
+        transition: .5s ease
+        &:hover
+            margin-right: 15px
+            border-radius: 0px 8px 8px 0px
+        ul
+            li
+                margin-right: 0px!important
+                &:hover
+                    margin-right: 0px!important
+            a
+                padding: 0px 15px 20px 30px!important
+        a
+            padding: 0px 30px 20px 30px!important
+            margin: 0px 0px 15px 0px
+            &::after
+                bottom: 10px
+                left: 30px
+                position: absolute
+                content: ""
+                width: 80%
+                height: 1px
+            svg
+                width: 12px
+                height: 12px
+            ul
+                padding-bottom: 15px!important
+                a
+                    &:nth-child(1)
+                        display: none!important
+                li
+                    margin-right: 0px!important
+                    &:hover
+                        margin-right: 0px!important
+                    a
+                        display: block!important

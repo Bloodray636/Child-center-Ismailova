@@ -1,0 +1,17 @@
+.navbar-expand-lg
+    .left-menu.overflow-hidden.mb-4
+      ul.list-group
+        li.list-group-item
+            a.position-relative.d-flex.align-items-center.justify-content-between.w-100(data-bs-toggle="collapse" href="#collapseItem" role="button" aria-expanded="false" aria-controls="collapseItem") Отзывы
+                svg(xml:space="preserve" viewBox="0 0 330 330")
+                    path(d="M315 120H210V15c0-8.284-6.716-15-15-15h-60c-8.284 0-15 6.716-15 15v105H15c-8.284 0-15 6.716-15 15v60c0 8.284 6.716 15 15 15h105v105c0 8.284 6.716 15 15 15h60c8.284 0 15-6.716 15-15V210h105c8.284 0 15-6.716 15-15v-60c0-8.284-6.716-15-15-15z")
+            ul.list-group.collapse(id="collapseItem")
+            each item in ["Пункт 1", "Пункт 2", "Пункт 3"]
+                li.list-group-item: a.position-relative.d-block.w-100(href="#")= item
+        each item in ["Aнкета", "Прими участие в опросе"]
+            li.list-group-item: a.position-relative.d-block.w-100(href="#")= item
+    button.navbar-toggler.ms-auto.w-100.mb-2(type="button" data-bs-toggle="collapse" data-bs-target="#left-menu" aria-controls="left-menu" aria-label="Toggle navigation") Меню
+    .left-menu.overflow-hidden.collapse.navbar-collapse(id="left-menu")
+        ul.list-group
+            each item in ["Противодействие коррупции", "Результаты независимой оценки качества условий оказания услуг", "Оставьте сигнал о неблагополучии", "Уважаемые получатели социальных услуг! На официальном сайте Министерства труда и социального развития Омской области Вы можете выразить свое мнение о качестве условий оказания услуг в нашей организации (для перехода к опросу нажмите на ссылку)"]
+                li.list-group-item: a.position-relative.d-block.w-100(href="#")= item
